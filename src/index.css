@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Off-white base inspired by sand/cream tones */
+    --background: 36 30% 96%;
+    --foreground: 200 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 10%;
+
+    /* Teal as primary (vivid pill in palette) */
+    --primary: 180 75% 32%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 174 55% 88%;
+    --primary-glow: 168 70% 75%;
+
+    --secondary: 36 35% 88%;
+    --secondary-foreground: 200 25% 12%;
+
+    --muted: 40 25% 92%;
+    --muted-foreground: 200 12% 30%;
+
+    /* Coral/orange accent */
+    --accent: 14 85% 52%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 28 80% 88%;
+
+    --destructive: 0 75% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 18% 80%;
+    --input: 36 18% 80%;
+    --ring: 180 75% 32%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar — soft sage/cream */
+    --sidebar-background: 80 18% 93%;
+    --sidebar-foreground: 200 20% 14%;
+    --sidebar-primary: 180 75% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 80 22% 85%;
+    --sidebar-accent-foreground: 200 25% 10%;
+    --sidebar-border: 80 15% 78%;
+    --sidebar-ring: 180 75% 32%;
+
+    --success: 150 70% 28%;
+    --success-foreground: 0 0% 100%;
+    --warning: 28 90% 45%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Gradients — slightly stronger to keep contrast with darker text */
+    --gradient-mint: linear-gradient(180deg, hsl(140 50% 82%), hsl(40 35% 88%));
+    --gradient-cream: linear-gradient(180deg, hsl(0 0% 98%), hsl(40 28% 86%));
+    --gradient-teal: linear-gradient(180deg, hsl(170 55% 38%), hsl(185 80% 28%));
+    --gradient-sand: linear-gradient(180deg, hsl(36 50% 86%), hsl(28 42% 76%));
+    --gradient-peach: linear-gradient(180deg, hsl(140 35% 82%), hsl(28 70% 78%));
+    --gradient-coral: linear-gradient(180deg, hsl(40 60% 84%), hsl(14 85% 60%));
+    --gradient-tan: linear-gradient(180deg, hsl(36 55% 86%), hsl(30 38% 74%));
+    --gradient-frost: linear-gradient(180deg, hsl(0 0% 98%), hsl(180 45% 84%));
+    --gradient-sage: linear-gradient(180deg, hsl(150 28% 76%), hsl(155 35% 48%));
+    --gradient-beige: linear-gradient(180deg, hsl(40 40% 86%), hsl(35 32% 78%));
+
+    /* Soft shadows tuned for light theme */
+    --shadow-soft: 0 1px 3px hsl(200 25% 10% / 0.10), 0 1px 2px hsl(200 25% 10% / 0.06);
+    --shadow-elevated: 0 10px 30px -10px hsl(180 60% 20% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-mint { background-image: var(--gradient-mint); }
+  .bg-gradient-cream { background-image: var(--gradient-cream); }
+  .bg-gradient-teal { background-image: var(--gradient-teal); }
+  .bg-gradient-sand { background-image: var(--gradient-sand); }
+  .bg-gradient-peach { background-image: var(--gradient-peach); }
+  .bg-gradient-coral { background-image: var(--gradient-coral); }
+  .bg-gradient-tan { background-image: var(--gradient-tan); }
+  .bg-gradient-frost { background-image: var(--gradient-frost); }
+  .bg-gradient-sage { background-image: var(--gradient-sage); }
+  .bg-gradient-beige { background-image: var(--gradient-beige); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+}
